@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MobileTechnicalTest</string>
+    <string name="laptop_list">Laptop List</string>
+    <string name="laptop_detail">Laptop Detail</string>
+</resources>

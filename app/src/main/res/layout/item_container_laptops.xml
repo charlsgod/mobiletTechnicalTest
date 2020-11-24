@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="laptop"
+            type="com.example.mobiletechnicaltest.models.Laptop" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_400"
+        android:layout_margin="@dimen/_4sdp"
+        android:padding="@dimen/_4sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_70sdp"
+            android:scaleType="centerCrop"
+            android:id="@+id/iv_laptop"
+            android:imageURL="@{laptop.image}"
+            app:srcCompat="@drawable/ic_placeholder"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:layout_height="@dimen/_70sdp" />
+
+        <TextView
+            android:id="@+id/tv_laptop_title"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:maxLines="2"
+            android:text="@{laptop.title}"
+            android:fontFamily="@font/ubuntu_medium"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_laptop"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_laptop_description"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:textColor="@color/gray"
+            android:textAlignment="textStart"
+            android:gravity="start"
+            android:maxLines="4"
+            android:layout_height="0dp"
+            android:fontFamily="@font/ubuntu_regular"
+            android:ellipsize="end"
+            android:text="@{laptop.description}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_laptop"
+            app:layout_constraintTop_toBottomOf="@+id/tv_laptop_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
